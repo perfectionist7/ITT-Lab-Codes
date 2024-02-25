@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function callfunc() {
+        if(document.getElementById("rad1").checked) {
+            alert("kitchen selected boi");
+        }
+        else if(document.getElementById("rad2").checked) {
+            alert("bedroom selected boi");
+        }
+        else if(document.getElementById("rad3").checked) {
+            alert("toyroom selected boi");
+        }
+        else if(document.getElementById("rad4").checked) {
+            alert("bathroom selected boi");
+        }
+        
+    }
+</script>
+<body>
+    Enter one of the rooms: <br>
+    <form action="itc_2.html">
+        <input type="radio" id="rad1" name="same"> 
+        kitchen <br>
+        <input type="radio" id="rad2" name="same">
+        bedroom <br>
+        <input type="radio" id="rad3" name="same">
+        toyroom <br>
+        <input type="radio" id="rad4" name="same">
+        bathroom <br>
+        <input type="submit" onclick="callfunc()">
+    </form>
+</body>
+</html>

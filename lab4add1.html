@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function changefont() {
+        document.getElementById("change").style.fontSize = "20px";
+    }
+    function changeagain() {
+        document.getElementById("change").style.fontSize = "12px"
+    }
+</script>
+<body>
+    <p id="change" onmouseover="changefont()" onmouseout="changeagain()" style="font-size: 12px;"> We are changing the font size here </p>
+    
+</body>
+</html>

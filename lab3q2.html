@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function getpig() {
+        var answer ="";
+        var text = document.getElementById("piglatin").value.toString();
+        var arr = text.split(" ");
+        for(i=0; i<arr.length; i++) {
+            var n = arr[i].length;
+            arr[i] = arr[i].substring(1,n) + arr[i].charAt(0) + "ay";
+            answer += arr[i];
+            answer += " ";
+        }
+        document.getElementById("answer").textContent = answer;
+
+        
+    }
+</script>
+<body>
+    <label> Enter the word: </label>
+    <input type="text" id="piglatin"> <br>
+    <p id="answer"> answer here </p>
+    <input type="submit" onclick="getpig()">
+</body>
+</html>

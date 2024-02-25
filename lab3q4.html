@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function generate() {
+        var word = document.getElementById("content").value.toString();
+        var n = word.length;
+        var str ="";
+        for(i=0; i<n-2; i++) {
+            for(j=i+1; j<n-1; j++) {
+                for(k=j+1; k<n; k++) {
+                    str += word[i] + word[j] + word[k]
+                    str += ", "
+                }
+            }
+        }
+        document.getElementById("answer").textContent = str.toString();
+
+    }
+</script>
+<body>
+    <input type="text" id="content">
+    <button id="submit" onclick="generate()"> Submit </button>
+    <div id="answer"></div>
+</body>
+</html>
+

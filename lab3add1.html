@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+           var previous = []
+    function cust() {
+        var n = document.getElementById("content").value.toString();
+        var n1 = parseInt(n);
+        var arr = [];
+        var charges = [];
+        for(i=0; i<n1; i++) {
+            arr[i] = parseFloat(prompt("Enter the hours for customer "+i));
+            if(arr[i]>3) {
+                charges[i] = 2 + 0.5*(arr[i]-3)
+            }
+            else {
+                charges[i] = 2;
+            }
+        }
+        document.getElementById("charges").textContent = charges.toString();
+        document.getElementById("previous").textContent = previous.toString();
+        previous = charges;
+
+
+    }
+</script>
+<body>
+    Enter the number of customers: <br>
+    <input type="text" id="content">
+    <button id="submit" onclick="cust()"> Submit </button>
+    Charges for each customer: <br>
+    <div id="charges"></div>
+    Previous day charges: <br>
+    <div id="previous"></div>
+</body>
+</html>

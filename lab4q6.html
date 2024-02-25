@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function changered() {
+        document.getElementById("newbody").style.backgroundColor="red"
+    }
+    function changeblue() {
+        document.getElementById("newbody").style.backgroundColor="blue"
+    }
+    function changegreen() {
+        document.getElementById("newbody").style.backgroundColor="green"
+    }
+</script>
+<body id="newbody">
+    <div id="red" onmouseover="changered()">
+        Red
+    </div>
+    <div id="blue" onmouseover="changeblue()">
+        Blue
+    </div>
+    <div id="green" onmouseover="changegreen()">
+        Green
+    </div>
+</body>
+</html>

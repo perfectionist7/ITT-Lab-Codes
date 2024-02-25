@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function newfunc() {
+        var str = "";
+        var str2 = "";
+        var total = 0;
+        var tot1=0, tot2=0;
+        if(document.getElementById("check1").checked) {
+            var quantity1 = parseInt(document.getElementById("quantity").value)
+            var amount1 = parseInt(document.getElementById("amount").value)
+            str += "furniture selected with quantity: "+quantity1.toString()+" and amount: "+amount1.toString() +"\n";
+            var tot1 = quantity1*amount1;
+            str2 += "total amount for furniture: " + tot1.toString() + "\n"
+        }
+        if(document.getElementById("check2").checked) {
+            var quantity2 = parseInt(document.getElementById("quantity2").value)
+            var amount2 = parseInt(document.getElementById("amount2").value)
+            str += "shower selected with quantity: "+quantity2.toString()+" and amount: "+amount2.toString() +"\n";
+            var tot2 = quantity2*amount2;
+            str2 += "total amount for shower: " + tot2.toString() + "\n"
+        }
+        total = tot1 + tot2;
+        document.getElementById("newdiv").textContent = str;
+        document.getElementById("newdiv0").textContent = str2;   
+        document.getElementById("newdiv1").textContent = "total amount" + total.toString();
+    }
+</script>
+<body>
+    Furniture 
+    <input type="checkbox" id="check1">
+    Quantity
+    <input type="text" id="quantity">
+    Amount
+    <input type="text" id="amount">
+    <br>
+    Shower
+    <input type="checkbox" id="check2">
+    Quantity 
+    <input type="text" id="quantity2">
+    Amount
+    <input type="text", id="amount2"> <br>
+
+    <input type="submit" onclick="newfunc()">
+
+    <div id="newdiv"></div> <br>
+    <div id="newdiv0"></div> <br>
+    <div id="newdiv1"></div>
+</body>
+</html>

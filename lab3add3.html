@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    function calcsales() {
+        var n = parseInt(document.getElementById("sales").value);
+        var arr = [];
+        var salaries = [];
+        var first=0,second=0,third=0,fourth=0,fifth=0,sixth=0,seventh=0,eight=0;
+        for(let i=0; i<n; i++) {
+            arr[i] = parseFloat(prompt("Enter the sales of salesperson "+i));
+            salaries[i] = 200 + 0.09*arr[i];
+            if(salaries[i] >= 300 && salaries[i] < 400) {
+                first++;
+            }
+            else if(salaries[i] >= 400 && salaries[i] < 500) {
+                second++;
+            }
+            else if(salaries[i] >= 500 && salaries[i] < 600) {
+                third++;
+            }
+            else if(salaries[i] >= 600 && salaries[i] < 700) {
+                fourth++;
+            }
+            else if(salaries[i] >= 700 && salaries[i] < 800) {
+                fifth++;
+            }
+            else if(salaries[i] >= 800 && salaries[i] < 900) {
+                sixth++;
+            }
+            else if(salaries[i] >= 900 && salaries[i] < 1000) {
+                seventh++;
+            }
+            else if(salaries[i] >= 1000) {
+                eight++;
+            }
+        }
+        document.getElementById("sal").textContent = salaries.toString();
+        document.getElementById("first").textContent = first.toString();
+        document.getElementById("second").textContent = second.toString();
+        document.getElementById("third").textContent = third.toString();
+        document.getElementById("fourth").textContent = fourth.toString();
+        document.getElementById("fifth").textContent = fifth.toString();
+        document.getElementById("sixth").textContent = sixth.toString();
+        document.getElementById("seventh").textContent = seventh.toString();
+        document.getElementById("eight").textContent = eight.toString();
+    }
+</script>
+<body>
+    Enter the number of salesperson <br>
+    <input type="text" id="sales"> <br>
+    <input type="submit" onclick="calcsales()"> <br>
+    Salaries: <br>
+    <div id="sal"></div> <br>
+    300 - 399
+    <div id="first"></div> <br>
+    400 - 499 
+    <div id="second"></div> <br>
+    500 - 599
+    <div id="third"></div> <br>
+    600 - 699
+    <div id="fourth"></div> <br>
+    700 - 799
+    <div id="fifth"></div> <br>
+    800 - 899
+    <div id="sixth"></div> <br>
+    900 - 999
+    <div id="seventh"></div> <br>
+    1000 and over
+    <div id="eight"></div> <br>
+
+
+
+</body>
+</html>

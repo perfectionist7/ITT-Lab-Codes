@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <table>
+        <tr>
+            <th> Number </th>
+            <th> Squares</th>
+            <th> Cubes </th>
+        </tr>
+        <tr>
+            <td> 1 </td>
+            <td id="sq1"> </td>
+            <td id="cu1"> </td>
+        </tr>
+        <tr>
+            <td> 2 </td>
+            <td id="sq2"> </td>
+            <td id="cu2"> </td>
+        </tr>
+        <tr>
+            <td> 3 </td>
+            <td id="sq3"> </td>
+            <td id="cu3"> </td>
+        </tr>
+
+    </table>
+</body>
+<script>
+    function square() {
+    for(let i=1; i<=3; i++) {
+        var sq = i*i;
+        var cu = i*i*i;
+        var sqid = "sq"+i.toString();
+        var cuid = "cu"+i.toString();
+        document.getElementById(sqid.toString()).textContent = sq;
+        document.getElementById(cuid.toString()).textContent = cu;
+
+    }
+    }
+square();
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> 
+<script>
+    function testfunc() {
+        var usn = document.getElementById("usn").value.toString();
+        var res = /[1-4]{1}[A-Z]{2}[1-9]{2}[A-Z]{2}[1-9]{3}/;
+        var ans = res.test(usn);
+        var semester = document.getElementById("semester").value.toString();
+        if(!ans) {
+            alert("invalid usn");
+        }
+        else {
+            alert("valid usn: "+usn+"semester: "+semester);
+        }
+    }
+</script>
+<body>
+    Enter the USN: <br>
+    <input type="text" id="usn"> <br>
+    Enter the semester: <br>
+    <input type="text" id="semester"> <br>
+    <button onclick="testfunc()"> Submit </button>
+</body>
+</html>

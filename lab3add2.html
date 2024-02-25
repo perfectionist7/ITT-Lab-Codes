@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var num = parseInt(Math.random()*10);
+    function generate() 
+    {
+        var entered = parseInt(document.getElementById("content").value);
+        if(num > entered) {
+            alert("Higher");
+        }
+        else if(num < entered) {
+            alert("Lower");
+        }
+        else {
+            alert("Guessed");
+        }
+    }
+</script>
+<body>
+    Enter a number between 1 and 10 <br>
+    <input type="text" id="content"> <br>
+    <div id="random"></div> <br>
+    <button id="submit", onclick="generate()"> submit </button>
+</body>
+</html>

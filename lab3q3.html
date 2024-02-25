@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function splitwork() {
+        var text = document.getElementById("content").value.toString();
+        var arr = text.split("(");
+        var areacode = arr[1].split(")");
+        document.getElementById("areacode").textContent = areacode[0].toString();
+        var first = areacode[1].split("-");
+        var phonenumber = first[0]+first[1];
+        document.getElementById("phonenumber").textContent = phonenumber.toString();
+    }
+</script>
+<body>
+    Enter the code or whatever: 
+    <input type="text" id="content"> <br>
+    Area Code:
+    <div id="areacode"> </div><br>
+    Phone Number: <br>
+    <div id="phonenumber"> </div><br>
+    <button onclick="splitwork()" id="clicking"> submit </button>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #first {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-color: aqua;
+        z-index: 0;
+        left: 0px;
+        bottom: 0px;
+    }
+    #second {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-color: yellow;
+        z-index: 1;
+        left: 15px;
+        bottom: 15px;
+    }
+    #third {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-color: orangered;
+        z-index: 2;
+        left: 30px;
+        bottom: 30px;
+    }
+</style>
+<script>
+    var a;
+    function setposition(element) {
+        a = element.style.zIndex;
+        element.style.zIndex = 3;
+    }
+    function resetposition(element) {
+        element.style.zIndex = a;
+    }
+</script>
+<body>
+    <p id="first" onmouseover="setposition(this)" onmouseout="resetposition(this)">
+        BOX1
+    </p>
+    <p id="second" onmouseover="setposition(this)" onmouseout="resetposition(this)">
+        BOX2
+    </p>
+    <p id="third" onmouseover="setposition(this)" onmouseout="resetposition(this)">
+        BOX3
+    </p>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var pe1=0,pe2=0,pe3=0,pe4=0,pe5=0;
+    function getpe1() {
+        var n = parseInt(document.getElementById("students").value)
+        pe1++;
+        if(pe1+pe2+pe3+pe4+pe5==n) {
+        alert("strength of pe1 "+pe1+"\n" +"strength of pe2 "+pe2+"\n"+"strength of pe3 "+pe3+"\n"+"strength of pe4 "+pe4+"\n"+"strength of pe5 "+pe5+"\n")
+    }
+    }
+    function getpe2() {
+        var n = parseInt(document.getElementById("students").value)
+        pe2++;
+        if(pe1+pe2+pe3+pe4+pe5==n) {
+        alert("strength of pe1"+pe1+"\n" +"strength of pe2"+pe2+"\n"+"strength of pe3"+pe3+"\n"+"strength of pe4"+pe4+"\n"+"strength of pe5"+pe5+"\n")
+    }
+    }
+    function getpe3() {
+        var n = parseInt(document.getElementById("students").value)
+        pe3++;
+        if(pe1+pe2+pe3+pe4+pe5==n) {
+        alert("strength of pe1"+pe1+"\n" +"strength of pe2"+pe2+"\n"+"strength of pe3"+pe3+"\n"+"strength of pe4"+pe4+"\n"+"strength of pe5"+pe5+"\n")
+    }
+    }
+    function getpe4() {
+        var n = parseInt(document.getElementById("students").value)
+        pe4++;
+        if(pe1+pe2+pe3+pe4+pe5==n) {
+        alert("strength of pe1"+pe1+"\n" +"strength of pe2"+pe2+"\n"+"strength of pe3"+pe3+"\n"+"strength of pe4"+pe4+"\n"+"strength of pe5"+pe5+"\n")
+    }
+    }
+    function getpe5() {
+        var n = parseInt(document.getElementById("students").value)
+        pe5++;
+        if(pe1+pe2+pe3+pe4+pe5==n) {
+        alert("strength of pe1"+pe1+"\n" +"strength of pe2"+pe2+"\n"+"strength of pe3"+pe3+"\n"+"strength of pe4"+pe4+"\n"+"strength of pe5"+pe5+"\n")
+    }
+    }
+
+</script>
+<body>
+    Enter the number of students:
+    <input type="text" id="students">
+    <form>
+        <input type="radio" id="course1" name="courses" onclick="getpe1()">
+        pe1
+        <input type="radio" id="course2" name="courses" onclick="getpe2()">
+        pe2
+        <input type="radio" id="course3" name="courses" onclick="getpe3()">
+        pe3
+        <input type="radio" id="course4" name="courses" onclick="getpe4()">
+        pe4
+        <input type="radio" id="course5" name="courses" onclick="getpe5()">
+        pe5
+
+    </form>
+    
+</body>
+</html>

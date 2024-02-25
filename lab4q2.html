@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function calc() {
+        var str = document.getElementById("str").value.toString();
+        var num = document.getElementById("num").value.toString();
+        var vowels = ["a","e","i","o","u"];
+        var newnum = '';
+        var index = 1000;
+        for(let i=0; i<vowels.length; i++) {
+            for(let j=0; j<str.length; j++) {
+                if(str[j]==vowels[i]) {
+                    index = Math.min(index,j);
+                }
+            }
+        }
+        document.getElementById("leftmost").textContent = index.toString();
+        var newnum;
+        for(let i=num.length-1; i>=0; i--) {
+            newnum += num.charAt(i);
+        }
+        document.getElementById("reverse").textContent = newnum.toString();
+    }
+</script>
+<body>
+    Enter the string: <br>
+    <input type="text", id="str"> <br>
+    Enter the number" <br>
+    <input type="text", id="num"> <br>
+
+    Leftmost character: <br>
+    <div id="leftmost"></div> <br>
+    Reverse Number: <br>
+    <div id="reverse"></div> <br>
+    <button id="submit", onclick="calc()"> Submit </button>
+</body>
+</html>
+
