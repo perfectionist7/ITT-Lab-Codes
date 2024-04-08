@@ -3,10 +3,18 @@
 # Body of the mail is in body.txt
 
 # open names.txt for reading
-with open("names.txt", "r", encoding="utf-8") as names_file:
+with open(
+    "C:/Users/akhan/OneDrive/Desktop/itt-lab-codes/LAB6/names.txt",
+    "r",
+    encoding="utf-8",
+) as names_file:
 
     # open body.txt for reading
-    with open("body.txt", "r", encoding="utf-8") as body_file:
+    with open(
+        "C:/Users/akhan/OneDrive/Desktop/itt-lab-codes/LAB6/body.txt",
+        "r",
+        encoding="utf-8",
+    ) as body_file:
 
         # read entire content of the body
         body = body_file.read()
