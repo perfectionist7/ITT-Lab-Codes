@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function calculate() {
+        var usnval = document.getElementById("usnid").value.toString()
+        var res = /[1-4]{2}[5-7]{1}/
+        var ans = res.test(usnval)
+        if(!ans) {
+            alert("invalid input!")
+        }
+        else {
+            alert("valid input!")
+        }
+    }
+</script>
+<body>
+    Enter the USN: <br> 
+    <input type="text" id="usnid"> <br>
+    <button onclick="calculate()">click here to continue</button>
+</body>
+</html>

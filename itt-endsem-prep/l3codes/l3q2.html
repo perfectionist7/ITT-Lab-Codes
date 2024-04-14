@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function checkpig() {
+        var textv = document.getElementById("pigcontent").value.toString();
+        var arr = textv.split(" ");
+        for(i=0;i<arr.length;i++) {
+            var n = arr[i].length;
+            arr[i] = arr[i].substring(1,n) + arr[i].charAt(0) + "ay";
+        }
+        var str = "";
+        for(i=0; i<arr.length; i++) {
+            str += arr[i] + " ";
+        }
+        document.getElementById("addtext").textContent = str;
+
+    }
+</script>
+<body>
+    Enter the word that u want to check<br>
+    <input type="text" id="pigcontent">
+    <button onclick="checkpig()"> Check </button>
+    <div id="addtext"> </div>
+</body>
+</html>

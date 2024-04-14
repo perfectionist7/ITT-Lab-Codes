@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function findanswer() {
+        var answ = document.getElementById("numbertext").value.toString()
+        var ans = answ.split('(')
+        var areacode = ans[1].split(')')
+        document.getElementById("container").textContent = areacode[0].toString()
+        var newans = areacode[1].split('-')
+        document.getElementById("container2").textContent = newans[0].toString()
+        document.getElementById("container3").textContent = newans[1].toString()
+    }
+</script>
+<body>
+    Enter the telephone number <br>
+    <input id="numbertext" type="text">
+    <br>
+    Area Code <br>
+    <div id="container"></div>
+    First Three Digits <br>
+    <div id="container2"></div>
+    Last 4 Digits <br>
+    <div id="container3"></div>
+    <button onclick="findanswer()"> Check </button>
+</body>
+</html>

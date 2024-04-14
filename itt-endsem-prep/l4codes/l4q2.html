@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function calculate() {
+        vowels = ['a','e','i','o','u'];
+        var inputt = document.getElementById("vowel").value.toString()
+        var flag = 0;
+        var i;
+        for(i=0; i<inputt.length; i++) {
+            for(let j=0; j<vowels.length; j++) {
+                if(inputt[i]==vowels[j]) {
+                    flag = 1
+                    break;
+                }
+            }
+            if (flag==1) {
+                break;
+            }
+        }
+        document.getElementById("ansvowel").textContent = "The leftmost vowel is at position "+i.toString()
+        var numint = document.getElementById("rev").value.toString();
+        var ans = "";
+        var n = numint.length
+        for(let i=0; i<n; i++) {
+            ans += numint.charAt(n-i-1);
+        }
+        document.getElementById("ansrev").textContent = "The digits in reverse order are"+ans.toString()
+
+    }
+</script>
+<body>
+    Enter the string here: <br>
+    <input type="text" id="vowel">
+    <br>
+    Enter the number here: <br>
+    <input type="text" id="rev">
+    <br>
+    <button onclick="calculate()">click here to begin</button>
+    <br>
+    <div id="ansvowel"></div>
+    <br>
+    <div id="ansrev"></div> 
+</body>
+</html>

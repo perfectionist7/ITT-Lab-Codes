@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function getcall() {
+        var sq = 0;
+        var cu = 0;
+        for(let i=1; i<=3; i++) {
+            sq = i*i;
+            cu = i*i*i;
+            document.getElementById("sq-"+i.toString()).textContent = sq.toString();
+            document.getElementById("cu-"+i.toString()).textContent = cu.toString();
+        } 
+    }
+</script>
+<body onload="getcall()">
+    <table>
+        <tr>
+            <th> Number </th>
+            <th> Squares</th>
+            <th> Cubes</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td id="sq-1"></td>
+            <td id="cu-1"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td id="sq-2"></td>
+            <td id="cu-2"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td id="sq-3"></td>
+            <td id="cu-3"></td>
+        </tr>
+    </table>
+
+    <br>
+    <button id="title" onclick="getcall()">Click here to submit </button>
+</body>
+</html>

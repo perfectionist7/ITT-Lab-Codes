@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var color = "red";
+    var fontsize = 10;
+    var text = "TEXT-GROWING";
+    var f = 0;
+    function modify(color, fontsize,text) {
+        document.getElementById("text").style.color = color;
+        document.getElementById("text").style.fontSize = fontsize;
+        document.getElementById("text").textContent = text;
+    }
+
+    function onchange() {
+        modify(color,fontsize+"px",text);
+        if(f==0) {
+            fontsize += 5;
+            color = "red";
+            text = "TEXT-GROWING";
+        }
+        else if(f==1) {
+            fontsize -= 5;
+            color = "blue";
+            text = "TEXT-SHRINKING";
+        }
+        if(fontsize > 45) {
+            f=1;
+        }
+        else if(fontsize < 5) {
+            f=0;
+        }
+    }
+    setInterval(onchange,100)
+
+</script>
+<body>
+    <div id="text" > TEXT-GROWING </div>
+</body>
+</html>

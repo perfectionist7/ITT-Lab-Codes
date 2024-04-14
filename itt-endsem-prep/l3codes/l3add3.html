@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function getdetails() {
+        var n = parseInt(prompt("Enter the number of sales people"))
+        var count = [0,0,0,0,0,0,0,0]
+        var amtmade = 0;
+        for(let i=0; i<n; i++) {
+            var amount_rev = parseInt(prompt("Enter the sales of person "+i))
+            amtmade = 200 + amount_rev*0.09
+            if(amtmade >= 300 && amtmade <= 399) {
+                count[0]++
+            }
+            else if(amtmade >=400 && amtmade <=499) {
+                count[1]++
+            }
+            else if(amtmade >=500 && amtmade <=599) {
+                count[2]++
+            }
+            else if(amtmade >= 600 && amtmade <= 699){
+                count[3]++
+            }
+            else if(amtmade >=700 && amtmade <= 799) {
+                count[4]++
+            }
+            else if(amtmade >=800 && amtmade <= 899) {
+                count[5]++
+            }
+            else if(amtmade >=900 && amtmade <=999) {
+                count[6]++
+            }
+            else if(amtmade >=1000) {
+                count[7]++
+            }
+        }
+        for(let i=0; i<=7; i++) {
+            document.getElementById("sal"+(i+1).toString()).textContent = count[i].toString()
+        }
+    }
+</script>
+<body>
+    <table>
+        <tr>
+            <th> Sr. No </th>
+            <th> Earning Range</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td> 300 -399 </td>
+            <td id="sal1"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td> 400 -499 </td>
+            <td id="sal2"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td> 500 -599 </td>
+            <td id="sal3"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>600 -699 </td>
+            <td id="sal4"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td> 700 -799 </td>
+            <td id="sal5"></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td> 800 -899 </td>
+            <td id="sal6"></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td> 900 -999 </td>
+            <td id="sal7"></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td> 1000 and over </td>
+            <td id="sal8"></td>
+        </tr>
+        </table>
+        <button onclick="getdetails()"> Click here to continue </button>
+</body>
+</html>

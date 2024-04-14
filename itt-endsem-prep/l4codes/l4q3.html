@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    before2 = ""
+    function setpostion(event) {
+        before = event.style.zIndex;
+        event.style.zIndex = 3;
+    }
+    function resetposition(event) {
+        event.style.zIndex = before;
+    }
+</script>
+<body>
+    <div id="firstbox" style="background-color: aqua; height: 100px; width: 100px; top:0px; left:0px; position: absolute; z-index: 0;" onmouseover="setpostion(this)" onmouseout="resetposition(this)"> BOX1 </div>
+    <div id="secondbox" style="background-color: orange; height: 100px; width: 100px; top:15px; left:15px; position: absolute; z-index: 0;" onmouseover="setpostion(this)" onmouseout="resetposition(this)"> BOX2 </div>
+    <div id="thirdbox" style="background-color: greenyellow; height: 100px; width: 100px; top:30px; left:30px; position: absolute; z-index: 0;" onmouseover="setpostion(this)" onmouseout="resetposition(this)"> BOX3 </div>
+</body>
+</html>

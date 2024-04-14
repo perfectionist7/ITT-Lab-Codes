@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function getlucky() {
+        var guessno = parseInt(Math.random()*15)
+
+        while (1) {
+            var n = parseInt(prompt("Enter a number between 1 and 15"))
+            if (n>guessno) {
+                alert("Lower")
+            }
+            else if(n<guessno) {
+                alert("Higher")
+            }
+            else if(n==guessno) {
+                alert("U guessed it!")
+                break;
+            }
+        }
+    }
+</script>
+<body>
+    <button onclick="getlucky()"> Click here to begin </button>
+</body>
+</html>

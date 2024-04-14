@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function increasefont() {
+        document.getElementById("text").style.fontSize = "20px";
+    }
+    function decreasefont() {
+        document.getElementById("text").style.fontSize =  "10px";
+    }
+</script>
+<body>
+    <div id="text" onmouseover="increasefont()" onmouseout="decreasefont()" style="font-size: 10px;">
+        this text is gonna move 
+    </div>
+</body>
+</html>

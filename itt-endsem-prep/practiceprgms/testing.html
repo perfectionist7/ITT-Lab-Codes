@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function gotootherpage() {
+    }
+    function checkwhatpressed() {
+        var pressed = "";
+        var str = "";
+        var radio1 = document.getElementById("rad1")
+        var radio2 = document.getElementById("rad2")
+        var radio3 = document.getElementById("rad3")
+        var check1 = document.getElementById("check1")
+        var check2 = document.getElementById("check2")
+        var check3 = document.getElementById("check3")
+
+        if(radio1.checked) {
+            pressed = radio1.value.toString();
+        }
+        else if(radio2.checked) {
+            pressed = radio2.value.toString();
+        }
+        else if(radio3.checked) {
+            pressed = radio3.value.toString();
+        }
+        if(check1.checked) {
+            str += check1.value.toString() + ",";
+        }
+        if(check2.checked) {
+            str += check2.value.toString() + ",";
+        }
+        if(check3.checked) {
+            str+= check3.value.toString() + ",";
+        }
+        document.getElementById("checking").textContent = pressed;
+        document.getElementById("nothingchecking").textContent = str;
+        location.href = "index.html"
+        localStorage.setItem('check',str)
+        localStorage.setItem('checking',pressed)
+    }
+</script>
+<body>
+    <input type="radio" id="rad1" name="same" value="hey">
+    hey
+    <br>
+    <input type="radio" id="rad2" name="same" value="whatsup">
+    whatsup
+    <br>
+    <input type="radio" id="rad3" name="same" value="nothing">
+    nothing
+    <br>
+    <br>
+    <input type="checkbox" id="check1" value="heya">
+    heya
+    <br>
+    <input type="checkbox" id="check2" value="ola">
+    ola
+    <br>
+    <input type="checkbox" id="check3" value="amigos">
+    amigos
+    <br>
+    <button onclick="checkwhatpressed()"> click here to see </button>
+    <!-- <button onclick="gotootherpage()"> click here to go to the other page </button> -->
+    <div id="checking"></div>
+    <br>
+    <div id="nothingchecking"></div>
+</body>
+</html>

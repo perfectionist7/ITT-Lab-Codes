@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function changebackgroundblue() {
+        document.getElementById("newd").style.background = "blue";
+    }
+    function changebackgroundgreen() {
+        document.getElementById("newd").style.background = "green";
+    }
+    function changebackgroundred() {
+        document.getElementById("newd").style.background = "yellow";
+    }
+</script>
+<body id="newd">
+    Hover over the following texts to get the color:
+    <br>
+    <br>
+    <div id="blue" style="color: blue;" onmouseover="changebackgroundblue()"> Blue </div>
+    <div id="green" style="color: green;" onmouseover="changebackgroundgreen()">Green</div>
+    <div id="yellow" style="color: yellow;" onmouseover="changebackgroundred()">Yellow</div>
+</body>
+</html>

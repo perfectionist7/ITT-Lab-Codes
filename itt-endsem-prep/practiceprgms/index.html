@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function getstarted() {
+    var val = localStorage.getItem('check').toString()
+    var val2 = localStorage.getItem('checking').toString()
+    var str = "";
+    str += val + val2;
+    document.getElementById("checkwhatsup").textContent = str;
+    }
+    
+</script>
+<body onload="getstarted()">
+    <div id="checkwhatsup">
+
+    </div>
+</body>
+</html>

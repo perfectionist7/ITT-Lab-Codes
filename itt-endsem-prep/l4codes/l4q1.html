@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function findfibo(n) {
+        arr = []
+        a = 0;
+        b = 1;
+        if(n==1) {
+            arr[0] = 0;
+            arr[1] = 1;
+            return arr
+        }
+        else if(n==0) {
+            arr[0] = 0;
+            return arr
+        }
+        else {
+            arr[0] = 0;
+            a = 0;
+            arr[1] = 1;
+            b = 1;
+            for(let i=2; i<n; i++) {
+                c = a+b;
+                a = b;
+                b = c;
+                arr[i] = b
+            }
+            return arr
+        }
+    }
+    function getcall() {
+        var newarr = []
+    var n = parseInt(document.getElementById("selection").value)
+    str = "";
+    if(n==1) {
+        var num = parseInt(prompt("Enter the number for the fibonacci series"))
+        newarr = findfibo(num)
+        for(let i=0; i<newarr.length; i++) {
+            str+=newarr[i].toString() + ",";
+        }
+        document.getElementById("ans").textContent = str;
+    }
+    else if(n==2) {
+        var num = parseInt(prompt("Enter the number for the tables"))
+        for(let i=1; i<=num; i++) {
+            str += i.toString() + ", square: "+(i*i).toString()+"\n"
+        }
+        alert(str)
+    }
+}
+</script>
+<body>
+    Enter your option below: <br>
+    <input type="text" id="selection">
+    <button onclick="getcall()">click here to begin</button>
+    <div id="ans"></div>
+    
+</body>
+</html>
