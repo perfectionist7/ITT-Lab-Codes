@@ -1,7 +1,6 @@
 import re
 
-s = "heya whats going on"
+r = "hey whats up"
 
-c = re.sub("whats", "nothing", s)
-
-print(c)
+b = re.sub("whats", "no", r)
+print(b)

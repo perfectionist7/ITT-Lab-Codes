@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,67 +7,68 @@
     <title>Document</title>
 </head>
 <script>
-    function gotootherpage() {
-    }
-    function checkwhatpressed() {
-        var pressed = "";
-        var str = "";
-        var radio1 = document.getElementById("rad1")
-        var radio2 = document.getElementById("rad2")
-        var radio3 = document.getElementById("rad3")
+    var str = ""
+    var pressed = ""
+    function oncalc() {
         var check1 = document.getElementById("check1")
         var check2 = document.getElementById("check2")
         var check3 = document.getElementById("check3")
+        var rad1 = document.getElementById("rad1")
+        var rad2 = document.getElementById("rad2")
+        var rad3 = document.getElementById("rad3")
 
-        if(radio1.checked) {
-            pressed = radio1.value.toString();
-        }
-        else if(radio2.checked) {
-            pressed = radio2.value.toString();
-        }
-        else if(radio3.checked) {
-            pressed = radio3.value.toString();
-        }
         if(check1.checked) {
-            str += check1.value.toString() + ",";
+            str+= check1.value.toString();
         }
         if(check2.checked) {
-            str += check2.value.toString() + ",";
+            str+= check2.value.toString();
         }
         if(check3.checked) {
-            str+= check3.value.toString() + ",";
+            str+= check3.value.toString();
         }
-        document.getElementById("checking").textContent = pressed;
-        document.getElementById("nothingchecking").textContent = str;
-        location.href = "index.html"
-        localStorage.setItem('check',str)
-        localStorage.setItem('checking',pressed)
+        if(rad1.checked) {
+            pressed = rad1.value.toString();
+        }
+        else if(rad2.checked) {
+            pressed = rad2.value.toString();
+        }
+        else if(rad3.checked) {
+            pressed = rad3.value.toString();
+        }
+
+        document.getElementById("display").textContent = pressed.toString();
+        document.getElementById("display2").textContent = str.toString();
+    }
+
+    function navigation() {
+        localStorage.setItem("key",str)
+        localStorage.setItem("key2",pressed)
+        window.location.href = "index.html"
     }
 </script>
 <body>
-    <input type="radio" id="rad1" name="same" value="hey">
-    hey
+    lets
+    <input type="checkbox" name="same" id="check1" value="lets">
     <br>
-    <input type="radio" id="rad2" name="same" value="whatsup">
-    whatsup
+    go
+    <input type="checkbox" name="same" id="check2" value="go">
     <br>
-    <input type="radio" id="rad3" name="same" value="nothing">
-    nothing
+    towards
+    <input type="checkbox" name="same" id="check3" value="towards">
     <br>
+    try
+    <input type="radio" name="same2" id="rad1" value="try">
     <br>
-    <input type="checkbox" id="check1" value="heya">
-    heya
+    to
+    <input type="radio" name="same2" id="rad2" value="to">
     <br>
-    <input type="checkbox" id="check2" value="ola">
-    ola
-    <br>
-    <input type="checkbox" id="check3" value="amigos">
-    amigos
-    <br>
-    <button onclick="checkwhatpressed()"> click here to see </button>
-    <!-- <button onclick="gotootherpage()"> click here to go to the other page </button> -->
-    <div id="checking"></div>
-    <br>
-    <div id="nothingchecking"></div>
+    go
+    <input type="radio" name="same2" id="rad3" value="go">
+
+
+    <button id="checkup" onclick="oncalc()"> click here to begin </button>
+    <button id="navigate" onclick="navigation()">click here to navigate</button>
+    <div id="display"></div>
+    <div id="display2"></div>
 </body>
 </html>

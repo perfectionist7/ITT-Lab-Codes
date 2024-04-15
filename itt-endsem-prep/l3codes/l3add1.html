@@ -7,28 +7,28 @@
 </head>
 <script>
     function callfunc() {
-        var n = parseInt(prompt("Enter the number of customers"))
-        arr = []
-        charges = []
-        str = "";
-        var charges1 = 0;
+        var charges
+        var n = parseInt(prompt("Enter the number of users"))
+        var str = "";
         for(let i=0; i<n; i++) {
-            var hours = parseInt(prompt("Enter the number of hours parked for user"+i))
-            arr[i] = hours;
-            if(hours <= 3) {
-                charges1 = 2;
+            var hours = parseInt(prompt("Enter the number of hours for user "+(i+1)))
+            if(hours<=3 && hours>=0) {
+                charges = 2;
             }
-            else if(hours > 3 ) {
-                charges1 = 2 + (hours-3)*0.5    
+            else if(hours > 3) {
+                charges = (hours-3)*0.5 +2;
             }
-            charges[i] = charges1
-            str += "user "+i+" hours "+hours+" charges: "+charges1 + "<br>";
+            else {
+                console.log("Invalid input!")
+            }
+            str+= "charges for user "+i+" for hours "+hours+" are "+charges + "<br>";
         }
-        document.getElementById("newans").innerHTML = str;
+        document.getElementById("result").innerHTML = str.toString();
     }
 </script>
 <body>
-    <button onclick="callfunc()">Click here to begin</button>
-    <div id="newans"></div>
+    Click below to begin
+    <button onclick="callfunc()">click here </button>
+    <div id="result"></div>
 </body>
 </html>

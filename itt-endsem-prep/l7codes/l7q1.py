@@ -1,8 +1,6 @@
 import sqlite3
 
 conn = sqlite3.connect("database.db")
-
-conn.execute("DROP TABLE STUDENT")
 conn.execute(
     "CREATE TABLE STUDENT( STUDENTID INT PRIMARY KEY, REGNO INT, BRANCH TEXT, SEMESTER INT, SECTION TEXT, CGPA FLOAT, EMAIL TEXT)"
 )

@@ -1,12 +1,36 @@
-mat1 = [[1, 3, 4], [2, 3, 5], [3, 2, 7]]
-mat2 = [[6, 5, 2], [3, 3, 4], [3, 2, 3]]
-result = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+print("Enter the matrix 1:")
 
+arr = []
 
-for i in range(len(mat1)):
-    for j in range(len(mat1[0])):
-        for k in range(len(mat1)):
-            result[i][j] += mat1[i][k] * mat2[k][j]
+for i in range(3):
+    transaction = []
+    for j in range(3):
+        transaction.append(int(input()))
+    arr.append(transaction)
 
+arr2 = []
+
+print("Enter the second matrix")
+
+for i in range(3):
+    transaction = []
+    for j in range(3):
+        transaction.append(int(input()))
+    arr2.append(transaction)
+
+print("The multiplication of the 2 matricies is: ")
+
+result = []
+
+for i in range(3):
+    transaction = []
+    for j in range(3):
+        transaction.append(0)
+    result.append(transaction)
+
+for i in range(len(arr)):
+    for j in range(len(arr2[0])):
+        for k in range(len(arr2)):
+            result[i][j] += arr[i][k] * arr2[k][j]
 
 print(result)
